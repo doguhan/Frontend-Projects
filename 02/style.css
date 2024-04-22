@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); /* Bu satır, Google Fonts hizmetinden "Permanent Marker" adlı bir yazı tipini içe aktarır. display=swap parametresi, yazı tipi yüklenirken kullanıcıya metinlerin önce sistem yazı tipiyle gösterilmesini ve yazı tipi yüklendiğinde sistem yazı tipinin yerine geçmesini sağlar. Bu, sayfanın yazı tipi yüklenirken boş gözükmesini önler ve kullanıcı deneyimini iyileştirir.*/
+
+body {
+    margin: 0; /* Bu özellik, body etiketinin tüm kenar boşluklarını (margin) sıfırlar, böylece sayfanın kenarlarında varsayılan olarak bulunan boşluklar kaldırılır. */
+    display: flex; /* CSS Flexbox modelini etkinleştirir. Bu model, body içindeki çocuk elementlerin düzenini daha esnek ve kolay bir şekilde yönetmek için kullanılır. */
+    justify-content: center; /* Bu özellik, Flexbox konteyneri içindeki öğeleri yatay eksende ortalar. Yani, body içindeki tüm çocuk elementler merkezlenir. */
+    align-items: center; /* Bu özellik, Flexbox konteyneri içindeki öğeleri dikey eksende ortalar. Bu sayede body içindeki tüm çocuk elementler yatayda olduğu gibi dikey olarak da ortalanır. */
+    height: 100vh; /* Bu özellik, body etiketinin yüksekliğini tarayıcı penceresinin tam görünüm yüksekliği (viewport height) kadar yapar. 100vh değeri, görüntüleme alanının %100'ü anlamına gelir. */
+    background-color: deepskyblue; /* body etiketinin arka plan rengini "deepskyblue" olarak ayarlar. Bu, gökyüzü mavisi benzeri canlı ve açık bir mavi tonudur. */
+    font-family: "Permanent Marker", cursive; /* Bu özellik, body içindeki tüm metinler için yazı tipi olarak "Permanent Marker"ı belirler. Eğer bu yazı tipi kullanılamazsa, tarayıcı cursive kategorisinden başka bir yazı tipini kullanır. */
+    font-weight: 400; /*Bu özellik, yazı tipinin kalınlığını belirler. 400 değeri normal kalınlığı temsil eder. */
+    font-style: normal; /* Bu özellik, yazı tipinin stilini belirler. normal, italik olmayan standart bir yazı stili anlamına gelir. */
+}
