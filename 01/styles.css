@@ -1,32 +1,32 @@
 body {
-    margin: 0;
-    height: 100vh;
-    background-color: black;
-    overflow: hidden;
+    margin: 0; /*Bu özellik, <body> elementinin etrafındaki varsayılan dış boşluğu (margin) sıfırlar. Tarayıcılar genellikle belirli bir dış boşlukla gelir, bu da sayfanın kenarları arasında boş bir alan oluşturur. margin: 0; ifadesi, sayfanın tüm kenarlarının tam olarak tarayıcı penceresine oturmasını sağlar, böylece herhangi bir boşluk kalmaz. */
+    height: 100vh; /*Bu özellik, <body> elementinin yüksekliğini tarayıcı penceresinin görünür yüksekliğine (viewport height) eşitler. Burada 100vh değeri, görüntüleme alanının yüzde 100'üne karşılık gelir. Bu, <body> elementinin her zaman tam ekran boyutunda olmasını sağlar, bağımsız olarak içeriğin boyutundan.  */
+    background-color: black; /* Bu ifade, <body> elementinin arka plan rengini siyah yapar. CSS'de background-color özelliği, bir elementin arka planının rengini belirlemek için kullanılır. "black" değeri, arka planın tamamen koyu olmasını sağlar. */
+    overflow: hidden; /* Bu özellik, <body> içindeki içeriğin belirtilen boyutları aşması durumunda nasıl davranılacağını belirler. hidden değeri, taşan içeriğin görüntülenmemesini sağlar; yani, içerik <body> boyutlarını aştığında, taşan kısımlar kesilir ve görünmez. Bu, genellikle kaydırma çubuklarının oluşmasını önlemek için kullanılır. */
 }
 
 span {
-    background: url("https://cdn4.iconfinder.com/data/icons/small-n-flat/24/heart-512.png");
-    width: 100px;
+    background: url("https://cdn4.iconfinder.com/data/icons/small-n-flat/24/heart-512.png"); /*Bu özellik, span elementinin arka planına bir resim yerleştirir. URL, resmin internet üzerindeki konumunu gösterir. Bu resim, span elementinin arka planını dolduracak şekilde kullanılacak. */
+    width: 100px; /* Bu özellikler, span elementinin genişliğini ve yüksekliğini belirler. Her iki değer de piksel cinsinden verilmiş, bu da span elementinin 100 piksel genişliğinde ve 100 piksel yüksekliğinde olacağını belirtir. */
     height: 100px;
-    position: absolute;
-    background-size: cover;
-    left: 50%;
+    position: absolute; /* Bu özellik, span elementini normal akış dışına çıkarır ve sayfada belirli bir konuma yerleştirilmesini sağlar. absolute pozisyonlama, elementin en yakın pozisyonlandırılmış ata elemente göre konumlandırılmasına olanak tanır. */
+    background-size: cover; /* Bu özellik, arka plan resminin span elementinin boyutlarını tam olarak kaplayacak şekilde ayarlanmasını sağlar. Resim, boyutları orantılı bir şekilde genişletilerek veya küçültülerek elementin tamamını kaplar. */
+    left: 50%; /* Bu özellikler, span elementinin sayfanın yatay ve dikey ortasına konumlandırılmasını sağlar. Ancak, bu noktada span'in sol üst köşesi merkezde olur. */
     top: 50%;
-    transform: translate(-50%,-50%);
-    pointer-events: none;
-    animation: animate 6s linear;
+    transform: translate(-50%,-50%); /* Bu özellik, span elementini hem yatay hem de dikey olarak kendi boyutlarının %50'si kadar geri kaydırır. Böylece, span elementinin tam ortası, sayfanın tam ortası ile hizalanır. */
+    pointer-events: none; /* Bu özellik, fare ile olan etkileşimleri devre dışı bırakır. Yani fare ile span elementi üzerine tıklandığında herhangi bir olay tetiklenmez ve fare olayları alttaki diğer elementlere ulaşır. Icon üzerindeki olayları kapatarak üst üste olay tetiklenmez. */
+    animation: animate 6s linear;  /*Bu özellik, span elementine bir animasyon uygular. Animasyonun adı animate, süresi 6 saniye ve hareket tarzı lineardır. linear, animasyonun başlangıcından sonuna kadar eşit hızda devam ettiği anlamına gelir.  */
 }
 
 @keyframes animate {
-    0% {
-        transform: translate(-50%, -50%);
-        opacity: 1;
-        filter: hue-rotate(0);
+    0% { /* Animasyonun başlangıç durumu (0% yani başlangıç anı). */
+        transform: translate(-50%, -50%); /* Bu, elementin yatayda (X ekseni) ve dikeyde (Y ekseni) kendisinin %50'si kadar geri çekilerek merkezde olmasını sağlar. */
+        opacity: 1; /* Elementin başlangıçta tamamen opak (görünür) olmasını belirtir. */
+        filter: hue-rotate(0); /* Renk tonu dönüşü filtresi. Bu durumda, elementin orijinal renk tonunda bir değişiklik yapmaz. */
 }
-    100% {
-        transform: translate(-50%, -5000%);
-        opacity: 0;
-        filter: hue-rotate(720deg);
+    100% { /* Animasyonun bitiş durumu (100% yani bitiş anı). */
+        transform: translate(-50%, -5000%); /* Bu, elementin yatayda (X ekseni) kendisinin %50'si kadar geri çekilerek aynı konumda kalmasını, ancak dikeyde (Y ekseni) başlangıç konumundan %5000 kadar yukarı kaymasını sağlar. Bu büyük oranda bir kayma, elementin hızla yukarı doğru "uçarak" kaybolmasına neden olur. */
+        opacity: 0; /* Elementin animasyonun sonunda tamamen saydam olmasını (görünmez) sağlar. */
+        filter: hue-rotate(720deg); /*  Renk tonu dönüşü filtresi. Bu, elementin renk tonunun animasyon boyunca 720 derece, yani iki tam dönüş yapacak şekilde değişmesini sağlar. */
     }
 }

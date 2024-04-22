@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kalp</title>
+    <link rel="stylesheet" href="styles.css"/> <!-- Stil dosyamizi belgemize dahil ediyoruz. -->
 </head>
 <body>
 
+<script src="web.js"></script>
+<!-- Neden JS Dosyaları body elementinin altında olur?
+    Sayfa Yüklenme Hızı: Web sayfaları yukarıdan aşağıya doğru yüklenir. <script> etiketleri, tarayıcı tarafından karşılaşıldığında, içerdikleri JavaScript dosyalarının yüklenmesi ve çalıştırılması gerekir. Eğer bu <script> etiketleri sayfanın başında yer alırsa, sayfanın geri kalan içeriğinin yüklenmesi JavaScript dosyasının indirilmesini ve işlenmesini bekler. Bu durum, sayfanın görsel içeriklerinin kullanıcıya gösterilmesini geciktirebilir. Ancak, <script> etiketleri <body> bölümünün sonuna yerleştirildiğinde, sayfanın HTML ve CSS içeriği önce yüklenir ve bu sayede kullanıcı sayfayı görmeye başlar. JavaScript yüklemesi bu süreçten sonra başladığı için kullanıcı deneyimi olumsuz yönde etkilenmez.
+    DOM Erişilebilirliği: JavaScript, genellikle Document Object Model (DOM) üzerinde işlem yapar. Eğer JavaScript kodu, HTML elementlerini manipüle etmeye çalışırsa, bu elementlerin DOM'da mevcut olması gerekir. Sayfanın başında <script> etiketi kullanılırsa, script çalıştığı sırada henüz yüklenmemiş olan HTML elementlerine erişim sorunları yaşanabilir. Ancak, <script> etiketleri sayfanın en altında yer alırsa, tüm HTML elementleri yüklenmiş olur ve JavaScript kodu bu elementlere sorunsuz bir şekilde erişebilir.
+    Asenkron ve Difer Yükleme Seçenekleri: Modern web geliştirme teknikleri arasında, <script> etiketlerine async veya defer öznitelikleri eklenerek, scriptlerin yüklenme ve çalıştırılma zamanlarını daha iyi kontrol etmek de mümkündür. async özniteliği, scriptlerin HTML yüklemesi ile paralel olarak yüklenip çalıştırılmasına olanak tanırken, defer özniteliği scriptlerin HTML dokümanının tamamı yüklendikten sonra sırayla çalıştırılmasını sağlar. Bu öznitelikler sayesinde, <script> etiketlerini <head> içerisine koymak mümkün olmasına rağmen, bazı durumlarda eski alışkanlıklar veya özel ihtiyaçlar nedeniyle scriptler hala <body> sonuna konulabilir.
+  -->
 </body>
 </html>
