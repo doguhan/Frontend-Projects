@@ -1,0 +1,46 @@
+body{
+    margin: 0; /* Sayfanın dört bir yanındaki varsayılan dış boşluğu (margin) sıfırlar, böylece ekranın kenarlarına herhangi bir boşluk kalmaz. */
+    display: flex; /* Sayfanın ana konteynerini bir Flexbox konteyneri yapar. Bu, içeriklerin hizalanması ve düzenlenmesi açısından daha esnek seçenekler sunar. */
+    justify-content: center; /* Flexbox özelliğini kullanarak, içerikleri yatay eksende (yatayda) ortalar. */
+    align-items: center; /* Flexbox özelliğini kullanarak, içerikleri dikey eksende (dikeyde) ortalar. */
+    height: 100vh; /* body elemanının yüksekliğini viewport'un (görüntüleme alanının) tam yüksekliği (100% viewport height) yapar, böylece tam ekran bir görünüm sağlar. */
+    font-family: cursive; /* Metinler için kullanılan yazı tipini italik, el yazısına benzeyen bir stile ayarlar. */
+    background-color: slateblue; /* Sayfanın arka plan rengini koyu mavi tonunda bir renk olan "slateblue" olarak belirler. */
+}
+
+.calender-container{
+    background-color: white; /* Takvim konteynerinin arka plan rengini beyaz yapar. */
+    width: 300px; /* Konteynerin genişliğini 300 piksel olarak sabitler. */
+    text-align: center; /* Konteyner içindeki tüm metinleri ortalar. */
+    border-radius: 10px; /* Konteynerin köşelerini yuvarlak yapar, yarıçapı 10 piksel olacak şekilde. */
+    box-shadow: 0 4px 8px rgba(0,0,0,.3); /* Konteynere, belirginlik ve derinlik hissi katmak için hafif bir gölge ekler. .3 %30 saydamlık verir. */
+    overflow: hidden; /* İçeriğin konteyner sınırlarının dışına taşmasını engeller. Özellikle Month-Name elementinin Köşelerde border-radius bozmasını önler. */
+}
+.month-name{
+    margin: 0; /* Üst ve alt margini sıfırlar. */
+    background-color: orangered; /* Arka plan rengini canlı bir kırmızı-turuncu tonu olan "orangered" yapar. */
+    color: white; /* Metin rengini beyaz yapar, kontrastı artırır. */
+    padding: 10px; /* İç boşluğu (padding) her yönden 10 piksel olarak ayarlar. */
+    font-size: 30px; /* Yazı boyutunu büyük yapar, 30 piksel. */
+    font-weight: bold; /* Yazı tipini kalın yapar. */
+}
+
+.day-name{
+    font-size: 20px; /* Belirli piksel değerleri ile metin boyutunu ayarlar  */
+    color: darkgray;
+
+}
+
+.day-number{
+    font-size: 80px; /* Belirli piksel değerleri ile metin boyutunu ayarlar  */
+    margin: 0;
+    font-weight: bold;
+}
+
+.year{
+    margin: 20px 0; /*  İlk değer (20px), üst ve alt kenar boşluklarını (top and bottom margins) belirler. Bu durumda, elementin üst ve alt tarafında 20 piksel boşluk bırakılır.
+                        İkinci değer (0), sağ ve sol kenar boşluklarını (right and left margins) belirler. Bu durumda, elementin sağ ve sol tarafında hiç boşluk bırakılmaz (0 piksel). */
+    font-size: 20px;
+    color: darkgray;
+    font-weight: 500; /* Metin kalınlığını belirli değerlerde (500) ayarlar. */
+}
